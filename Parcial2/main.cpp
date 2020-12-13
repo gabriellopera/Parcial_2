@@ -1,8 +1,5 @@
-#include <iostream>
 #include "disparo_defen.h"
 #include "disparo_ofen.h"
-
-using namespace std;
 
 int main()
 {
@@ -20,8 +17,8 @@ int main()
 
     switch(A){
         case 1:{
-            doffensive Do;
-            Do.DisparoOfensivo(Voo);
+            doffensive D0;
+            D0.DisparoOfensivo(Voo);
 
         }
             break;
