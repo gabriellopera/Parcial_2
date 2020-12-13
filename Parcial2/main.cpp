@@ -9,7 +9,8 @@ int main()
     int Voo;
     cout << "Ingrese Vo desde la cual quiere probar: " << endl;
     cin >> Voo;
-    doffensive r1;
-    r1.DisparoOfensivo(Voo);
+    doffensive Do; disparo_defen D1;
+    //Do.DisparoOfensivo(Voo);
+    D1.DisparoDefensivo(Voo);
     return 0;
 }

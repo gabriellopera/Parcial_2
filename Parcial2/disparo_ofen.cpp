@@ -23,7 +23,7 @@ void doffensive::DisparoOfensivo(int Voo){
                 y = Yo + Vy0*t -(0.5*G*t*t);
                 if(sqrt(pow((Xd - x),2)+pow((Yd - y),2)) < d0){
                     if(y<0) y = 0;
-                    ImprimirResultados1(angle, V0o, x, y, t);
+                    ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
                     V0o += 50;
                     break;
@@ -42,7 +42,7 @@ void doffensive::DisparoOfensivo(int Voo){
     }
 }
 
-void doffensive::ImprimirResultados1(int angle,int V0o,float x,float y,int t)
+void doffensive::ImprimirResultados(int angle,int V0o,float x,float y,int t)
 {
     cout << "Impacto con un angulo de " << angle << " grados" << endl;
     cout << "Impacto con velocidad incial " << V0o << endl;

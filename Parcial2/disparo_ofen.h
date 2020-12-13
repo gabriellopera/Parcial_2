@@ -23,7 +23,7 @@ class doffensive
 
 public:
     void DisparoOfensivo(int Voo);
-    void ImprimirResultados1(int angle,int V0o,float x,float y,int t);
+    void ImprimirResultados(int angle,int V0o,float x,float y,int t);
 };
 
 #endif // DOFFENSIVE_H
