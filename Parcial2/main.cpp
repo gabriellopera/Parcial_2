@@ -6,11 +6,43 @@ using namespace std;
 
 int main()
 {
-    int Voo;
+    int Voo, A;
     cout << "Ingrese Vo desde la cual quiere probar: " << endl;
-    cin >> Voo;
-    doffensive Do; disparo_defen D1;
-    //Do.DisparoOfensivo(Voo);
-    D1.DisparoDefensivo(Voo);
+    cin >> Voo; cout<<endl;
+
+    cout<<"1. Generar disparos (al menos tres) ofensivos que comprometan la integridad del canon defensivo"<<endl;
+    cout<<"2. Generar disparos (al menos tres) defensivos que comprometan la integridad del canon ofensivo"<<endl;
+    cout<<"3. Dado un disparo ofensivo, generar (al menos tres) disparos defensivos que impida que el canon defensivo sea destruido sin importar si el canon ofensivo pueda ser destruido"<<endl;
+    cout<<"4. Dado un disparo ofensivo, generar (al emnos tres) disparo defensivos que impidan que los canones defensivo y ofensivo puedan ser destruidos"<<endl;
+    cout<<"5. Dado un disparo ofensivo efectivo y un disparo defensivo que comprometa la efectividad del ataque ofensivo, generar (al menos tres) disparos que neutralicen el ataque defensivo y permitan que el ataque ofensivo sea efectivo. "<<endl;cout<<endl;
+    cout<<"Elija una opcion: ";
+    cin>>A;cout<<endl;
+
+    switch(A){
+        case 1:{
+            doffensive Do;
+            Do.DisparoOfensivo(Voo);
+
+        }
+            break;
+        case 2:{
+            disparo_defen D1;
+            D1.DisparoDefensivo(Voo);
+        }
+            break;
+        case 3:{
+
+        }
+            break;
+        case 4:{
+
+        }
+            break;
+        case 5:{
+
+        }
+            break;
+    }
+
     return 0;
 }
