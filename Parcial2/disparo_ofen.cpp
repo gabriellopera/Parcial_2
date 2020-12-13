@@ -1,11 +1,11 @@
 #include "disparo_ofen.h"
 
-//doffensive::doffensive()
-//{
+doffensive::doffensive(int _Voo)
+{
+    Voo = _Voo;
+}
 
-//}
-
-void doffensive::DisparoOfensivo(int Voo){
+void doffensive::DisparoOfensivo(){
     int flag = 0;
     float x,y;
     float Vxo,Vy0;

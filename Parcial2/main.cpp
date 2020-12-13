@@ -17,14 +17,14 @@ int main()
 
     switch(A){
         case 1:{
-            doffensive D0;
-            D0.DisparoOfensivo(Voo);
+            doffensive D0 = doffensive(Voo);
+            D0.DisparoOfensivo();
 
         }
             break;
         case 2:{
-            disparo_defen D1;
-            D1.DisparoDefensivo(Voo);
+            ddefensive D1 = ddefensive(Voo);
+            D1.DisparoDefensivo();
         }
             break;
         case 3:{

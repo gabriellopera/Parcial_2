@@ -7,21 +7,24 @@
 
 using namespace std;
 
-class disparo_defen
+class ddefensive
 {
+
+private:
     float d = 800;
     float Hd = 100;
     float Xd = d;
     float Yd = Hd;
     float d0 = 0.025*d;
-
+    int Voo;
     float Ho = 200;
     float Xo = 0;
     float Yo = Ho;
     float d02 = 0.05*d;
 
 public:
-    void DisparoDefensivo(int Voo);
+    ddefensive(int);
+    void DisparoDefensivo();
     void ImprimirResultados(int angle,int V0o,float x,float y,int t);
 };
 

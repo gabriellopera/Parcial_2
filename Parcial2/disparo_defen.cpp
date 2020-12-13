@@ -1,11 +1,12 @@
 #include "disparo_defen.h"
 
-//disparo_defen::disparo_defen()
-//{
+ddefensive::ddefensive(int _Voo)
+{
+    Voo = _Voo;
 
-//}
+}
 
-void disparo_defen::DisparoDefensivo(int Voo){
+void ddefensive::DisparoDefensivo(){
     int flag = 0;
     float x,y;
     float Vxo,Vy0;
@@ -42,7 +43,7 @@ void disparo_defen::DisparoDefensivo(int Voo){
     }
 }
 
-void disparo_defen::ImprimirResultados(int angle,int V0o,float x,float y,int t)
+void ddefensive::ImprimirResultados(int angle,int V0o,float x,float y,int t)
 {
     cout << "Impacto con un angulo de " << angle << " grados" << endl;
     cout << "Impacto con velocidad incial " << V0o << endl;
