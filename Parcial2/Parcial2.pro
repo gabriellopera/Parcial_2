@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        disparo_defen.cpp \
-        disparo_ofen.cpp \
+        canon_defen.cpp \
+        canon_ofen.cpp \
         main.cpp
 
 HEADERS += \
-    disparo_defen.h \
-    disparo_ofen.h
+    canon_defen.h \
+    canon_ofen.h

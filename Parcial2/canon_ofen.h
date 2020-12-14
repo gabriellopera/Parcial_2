@@ -1,5 +1,5 @@
-#ifndef DOFFENSIVE_H
-#define DOFFENSIVE_H
+#ifndef CANON_OFEN_H
+#define CANON_OFEN_H
 #include <iostream>
 #include <math.h>
 #define G 9.81
@@ -11,8 +11,8 @@ class doffensive
 {
 
 private:
-    float d = 800;
-    float Ho = 200;
+    float d = 1000;
+    float Ho = 20;
     float Xo = 0;
     float Yo = Ho;
     float d0 = 0.05*d;

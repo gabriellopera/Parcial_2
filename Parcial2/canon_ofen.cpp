@@ -1,4 +1,4 @@
-#include "disparo_ofen.h"
+#include "canon_ofen.h"
 
 doffensive::doffensive(int _Voo)
 {
@@ -13,7 +13,7 @@ void doffensive::DisparoOfensivo(){
     int t = 0;
     int angle = 0;
     for(V0o = Voo; ; V0o += 5){
-        for(angle = 0; angle < 90; angle++){
+        for(angle = 1; angle < 90; angle++){
             Vxo = V0o*cos(angle*pi/180);
             Vy0 = V0o*sin(angle*pi/180);
             x = 0.0;
@@ -44,10 +44,10 @@ void doffensive::DisparoOfensivo(){
 
 void doffensive::ImprimirResultados(int angle,int V0o,float x,float y,int t)
 {
-    cout << "Impacto con un angulo de " << angle << " grados" << endl;
-    cout << "Impacto con velocidad incial " << V0o << endl;
-    cout << "Impacto con posicion x: " << x << endl;
-    cout << "Impacto con posicion y: " << y << endl;
-    cout << "Con tiempo: " << t << endl;
+    cout << "------------Parametros del impacto------------"<<endl;
+    cout << "Angulo: " << angle << " grados." << endl;
+    cout << "Velocidad inicial: " << V0o << " m/s." << endl;
+    cout << "Coordenadas: [X: " << x << ", Y: "<< y << "]" << endl;
+    cout << "Tiempo de impacto: " << t << " seg."<< endl;
     cout << endl;
 }

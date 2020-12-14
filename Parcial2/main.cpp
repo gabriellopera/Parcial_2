@@ -1,5 +1,5 @@
-#include "disparo_defen.h"
-#include "disparo_ofen.h"
+#include "canon_defen.h"
+#include "canon_ofen.h"
 
 int main()
 {
@@ -23,15 +23,19 @@ int main()
         }
             break;
         case 2:{
-            ddefensive D1 = ddefensive(Voo);
+            ddefensive D1 = ddefensive(Voo,0,0);
             D1.DisparoDefensivo();
         }
             break;
         case 3:{
+            ddefensive D2 = ddefensive(Voo,46,100);
+            D2.DisparoDefensivo2();
 
         }
             break;
         case 4:{
+            ddefensive D3 = ddefensive(Voo,40,120);
+            D3.DisparoDefensivo2();
 
         }
             break;
