@@ -3,13 +3,15 @@
 
 int main()
 {
-    int Voo, A; float Hd, Ho;
+    int Voo, A; float Hd, Ho, d;
     cout << "Ingrese Vo desde la cual quiere probar: ";
     cin >> Voo; cout<<endl;
-    cout << "Ingrese altura del canon defensivo: ";
+    cout << "Ingrese altura del canion defensivo: ";
     cin >> Hd; cout<<endl;
-    cout << "Ingrese altura del canon ofensivo: ";
+    cout << "Ingrese altura del canion ofensivo: ";
     cin >> Ho; cout<<endl;
+    cout << "Ingrese distancia 'd' entre ambos caniones: ";
+    cin >> d; cout<<endl;
 
     cout<<"1. Generar disparos (al menos tres) ofensivos que comprometan la integridad del canon defensivo"<<endl;
     cout<<"2. Generar disparos (al menos tres) defensivos que comprometan la integridad del canon ofensivo"<<endl;
@@ -21,32 +23,29 @@ int main()
 
     switch(A){
         case 1:{
-            doffensive D0 = doffensive(Voo,0,0,Hd,Ho);
+            doffensive D0 = doffensive(Voo,0,0,Hd,Ho,d);
             D0.DisparoOfensivo();
-
         }
             break;
         case 2:{
-            ddefensive D1 = ddefensive(Voo,0,0,Hd,Ho);
+            ddefensive D1 = ddefensive(Voo,0,0,Hd,Ho,d);
             D1.DisparoDefensivo();
         }
             break;
         case 3:{
-            ddefensive D2 = ddefensive(Voo,46,100,Hd,Ho);
+            ddefensive D2 = ddefensive(Voo,46,100,Hd,Ho,d); //46,100 son angulo y Vel.Inicial respecti. que son los datos brindados por mi infiltrado
             D2.DisparoDefensivo2();
-
         }
             break;
         case 4:{
-            ddefensive D3 = ddefensive(Voo,45,100,Hd,Ho);
-            D3.DisparoDefensivo2();
+            ddefensive D3 = ddefensive(Voo,50,130,Hd,Ho,d);//50,130 son angulo y Vel.Inicial respecti. que son los datos brindados por mi infiltrado
+            D3.DisparoDefensivo3();
             break;
         }
             break;
         case 5:{
-            doffensive D4 = doffensive(Voo,2,34,Hd,Ho);
+            doffensive D4 = doffensive(Voo,2,60,Hd,Ho,d);//2,34 son angulo y Vel.Inicial respectiv. que son los datos brindados por mi infiltrado
             D4.DisparoOfensivo2();
-
         }
             break;
     }

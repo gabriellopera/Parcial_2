@@ -11,19 +11,19 @@ class ddefensive
 {
 
 private:
-    float d = 1000;
+    float d;
     float Hd;
-    float Xd = d;
+    float Xd;
     float Yd;
-    float d0 = 0.025*d;
+    float d0;
     int Voo, angleoo, Vooo;
     float Ho;
     float Xo = 0;
     float Yo;
-    float d02 = 0.05*d;
+    float d02;
 
 public:
-    ddefensive(int,int,int,float,float);
+    ddefensive(int,int,int,float,float,float);
     void DisparoDefensivo();
     void DisparoDefensivo2();
     void DisparoDefensivo3();

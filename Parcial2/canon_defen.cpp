@@ -1,6 +1,6 @@
 #include "canon_defen.h"
 
-ddefensive::ddefensive(int _Voo, int _angleoo, int _Vooo, float _Hd, float _Ho)
+ddefensive::ddefensive(int _Voo, int _angleoo, int _Vooo, float _Hd, float _Ho, float _d)
 {
     Voo = _Voo;
     angleoo = _angleoo;
@@ -9,6 +9,10 @@ ddefensive::ddefensive(int _Voo, int _angleoo, int _Vooo, float _Hd, float _Ho)
     Ho = _Ho;
     Yo = Ho;
     Yd = Hd;
+    d = _d;
+    Xd = d;
+    d0 = 0.025*d;
+    d02 = 0.05*d;
 }
 
 
@@ -33,7 +37,7 @@ void ddefensive::DisparoDefensivo(){
                     if(y<0) y = 0;
                     ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
-                    V0o += 30;
+                    V0o += 10;
                     break;
                 }
                 if(y < 0){
@@ -89,7 +93,7 @@ void ddefensive::DisparoDefensivo2(){
                     if(y<0) y = 0;
                     ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
-                    V0o += 30;
+                    V0o += 10;
                     break;
                 }
                 if(y < 0){
@@ -142,7 +146,7 @@ void ddefensive::DisparoDefensivo3(){
                     ImprimirResultados(angle, V0o, x, y, t);
 
                     flag += 1;
-                    V0o += 30;
+                    V0o += 10;
 
 
                     break;

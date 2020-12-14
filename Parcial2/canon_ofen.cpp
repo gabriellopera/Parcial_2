@@ -1,6 +1,6 @@
 #include "canon_ofen.h"
 
-doffensive::doffensive(int _Voo,  int _angleoo, int _Vooo, float _Hd, float _Ho)
+doffensive::doffensive(int _Voo,  int _angleoo, int _Vooo, float _Hd, float _Ho, float _d)
 {
     Voo = _Voo;
     angleoo = _angleoo;
@@ -9,6 +9,10 @@ doffensive::doffensive(int _Voo,  int _angleoo, int _Vooo, float _Hd, float _Ho)
     Ho = _Ho;
     Yo = Ho;
     Yd = Hd;
+    d = _d;
+    Xd = d;
+    d0 = 0.025*d;
+    d02 = 0.05*d;
 }
 
 void doffensive::DisparoOfensivo(){
@@ -18,20 +22,20 @@ void doffensive::DisparoOfensivo(){
     int V0o = 0;
     int t = 0;
     int angle = 0;
-    for(V0o = Voo; ; V0o += 5){
+    for(V0o = Voo; V0o<(Hd*4); V0o += 1){
         for(angle = 1; angle < 90; angle++){
             Vxo = V0o*cos(angle*pi/180);
             Vy0 = V0o*sin(angle*pi/180);
             x = 0.0;
             y = 0.0;
-            for(t = 0; ; t++){
+            for(t = 0;t<300 ; t++){
                 x = Vxo*t;
                 y = Yo + Vy0*t -(0.5*G*t*t);
                 if(sqrt(pow((Xd - x),2)+pow((Yd - y),2)) < d02){
                     if(y<0) y = 0;
                     ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
-                    V0o += 30;
+                    V0o += 1;
                     break;
                 }
                 if(y < 0){
@@ -59,7 +63,7 @@ void doffensive::DisparoOfensivo2(){
 
     Vxoo = Vooo*cos((angleoo+90)*pi/180);
     Vyoo = Vooo*sin((angleoo+90)*pi/180);
-    for(V0o = Voo; ; V0o += 5){
+    for(V0o = Voo; V0o<(Hd*4) ; V0o += 5){
         for(angle = 1; angle < 90; angle++){
             Vxo = V0o*cos((angle)*pi/180);
             Vy0 = V0o*sin((angle)*pi/180);
@@ -67,7 +71,7 @@ void doffensive::DisparoOfensivo2(){
             y = 0.0;
             x2 = 0.0;
             y2 = 0.0;
-            for(t = 0; ; t++){
+            for(t = 0;t<300 ; t++){
                 x2 = Hd+Vxoo*(t+1);
                 y2 = Yd + Vyoo*(t+1) -(0.5*G*(t+1)*(t+1));
                 x = Vxo*t;
@@ -87,7 +91,7 @@ void doffensive::DisparoOfensivo2(){
                     if(y<0) y = 0;
                     ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
-                    V0o += 30;
+                    V0o += 10;
                     break;
                 }
 
