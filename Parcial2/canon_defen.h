@@ -12,18 +12,18 @@ class ddefensive
 
 private:
     float d = 1000;
-    float Hd = 100;
+    float Hd;
     float Xd = d;
-    float Yd = Hd;
+    float Yd;
     float d0 = 0.025*d;
     int Voo, angleoo, Vooo;
-    float Ho = 20;
+    float Ho;
     float Xo = 0;
-    float Yo = Ho;
+    float Yo;
     float d02 = 0.05*d;
 
 public:
-    ddefensive(int,int,int);
+    ddefensive(int,int,int,float,float);
     void DisparoDefensivo();
     void DisparoDefensivo2();
     void DisparoDefensivo3();

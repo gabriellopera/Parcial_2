@@ -1,10 +1,14 @@
 #include "canon_defen.h"
 
-ddefensive::ddefensive(int _Voo, int _angleoo, int _Vooo)
+ddefensive::ddefensive(int _Voo, int _angleoo, int _Vooo, float _Hd, float _Ho)
 {
     Voo = _Voo;
     angleoo = _angleoo;
     Vooo = _Vooo;
+    Hd = _Hd;
+    Ho = _Ho;
+    Yo = Ho;
+    Yd = Hd;
 }
 
 
@@ -17,7 +21,7 @@ void ddefensive::DisparoDefensivo(){
     int t = 0;
     int angle = 0;
     for(V0o = Voo; ; V0o += 5){
-        for(angle = 0; angle < 90; angle++){
+        for(angle = 1; angle < 90; angle++){
             Vxo = V0o*cos((angle+90)*pi/180);
             Vy0 = V0o*sin((angle+90)*pi/180);
             x = 0.0;
@@ -29,7 +33,7 @@ void ddefensive::DisparoDefensivo(){
                     if(y<0) y = 0;
                     ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
-                    V0o += 50;
+                    V0o += 30;
                     break;
                 }
                 if(y < 0){
@@ -57,7 +61,7 @@ void ddefensive::DisparoDefensivo2(){
     Vxoo = Vooo*cos((angleoo)*pi/180);
     Vyoo = Vooo*sin((angleoo)*pi/180);
     for(V0o = Voo; ; V0o += 5){
-        for(angle = 0; angle < 90; angle++){
+        for(angle = 1; angle < 90; angle++){
             Vxo = V0o*cos((angle+90)*pi/180);
             Vy0 = V0o*sin((angle+90)*pi/180);
             x = 0.0;
@@ -76,23 +80,28 @@ void ddefensive::DisparoDefensivo2(){
                         ImprimirResultados(angleoo,Vooo,x2,y2,t+2);
                         flag1 = 1; cout<<endl;
                         cout<<"Parametros de 3 disparos defensivos sin importar que afecte al ofensivo o no: "<<endl;
+                        ImprimirResultados(angle, V0o, x, y, t);
+                        cout << "________________________________________"<<endl;
                     };
-                    cout << "________________________________________"<<endl;
+
+                }
+                if(sqrt(pow((Xo - x),2)+pow((Yo - y),2)) < d0){
+                    if(y<0) y = 0;
                     ImprimirResultados(angle, V0o, x, y, t);
                     flag += 1;
-                    V0o += 50;
+                    V0o += 30;
                     break;
                 }
                 if(y < 0){
                     break;
                 }
             }
-            if(flag == 3) break;
+            if(flag == 2) break;
 
         }
-        if(flag == 3) break;
+        if(flag == 2) break;
     }
-    if(flag != 3){
+    if(flag != 2){
         cout << "No impacto en los disparos esperados"<< endl;
     }
 }
@@ -109,7 +118,7 @@ void ddefensive::DisparoDefensivo3(){
     Vxoo = Vooo*cos((angleoo)*pi/180);
     Vyoo = Vooo*sin((angleoo)*pi/180);
     for(V0o = Voo; ; V0o += 5){
-        for(angle = 0; angle < 90; angle++){
+        for(angle = 1; angle < 90; angle++){
             Vxo = V0o*cos((angle+90)*pi/180);
             Vy0 = V0o*sin((angle+90)*pi/180);
             x = 0.0;
@@ -131,8 +140,11 @@ void ddefensive::DisparoDefensivo3(){
                     };
                     cout << "________________________________________"<<endl;
                     ImprimirResultados(angle, V0o, x, y, t);
+
                     flag += 1;
-                    V0o += 50;
+                    V0o += 30;
+
+
                     break;
                 }
                 if(y < 0){
@@ -146,8 +158,14 @@ void ddefensive::DisparoDefensivo3(){
     }
     if(flag != 3){
         cout << "No impacto en los disparos esperados"<< endl;
+
     }
 }
+
+
+
+
+
 
 
 void ddefensive::ImprimirResultados(int angle,int V0o,float x,float y,int t)

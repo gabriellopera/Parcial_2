@@ -12,19 +12,20 @@ class doffensive
 
 private:
     float d = 1000;
-    float Ho = 20;
+    float Ho;
     float Xo = 0;
-    float Yo = Ho;
+    float Yo;
     float d0 = 0.05*d;
-    int Voo;
-    float Hd = 100;
+    int Voo, angleoo, Vooo;
+    float Hd;
     float Xd = d;
-    float Yd = Hd;
+    float Yd;
     float d02 = 0.025*d;
 
 public:
-    doffensive(int);
+    doffensive(int, int, int, float, float);
     void DisparoOfensivo();
+    void DisparoOfensivo2();
     void ImprimirResultados(int angle,int V0o,float x,float y,int t);
 };
 
