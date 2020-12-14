@@ -82,7 +82,7 @@ void doffensive::DisparoOfensivo2(){
                         cout<<"Parametros disparo defensivo: "<<endl;
                         ImprimirResultados(angleoo, Vooo, x2, y2, t+1);
                         flag1=1;cout<<endl;
-                        cout<<"Parametros de 3 disparos ofensivos efectivos: "<<endl;
+                        cout<<"Parametros de 1 disparo ofensivo que neutraliza el disparo defensivo y otros 2 disparos ofensivos que son efectivos : "<<endl;
                         ImprimirResultados(angle, V0o, x, y, t);
                         cout << "________________________________________"<<endl;
                     };

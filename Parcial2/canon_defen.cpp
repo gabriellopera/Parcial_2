@@ -140,7 +140,7 @@ void ddefensive::DisparoDefensivo3(){
                         cout<<"Parametros disparo ofensivo: "<<endl;
                         ImprimirResultados(angleoo,Vooo,x2,y2,t+2);
                         flag1 = 1; cout<<endl;
-                        cout<<"Parametros de 3 disparos defensivos para evitar destrucción tanto del ofensivo como del defensivo: "<<endl;
+                        cout<<"Parametros de 3 disparos defensivos para evitar destruccion tanto del ofensivo como del defensivo: "<<endl;
                     };
                     cout << "________________________________________"<<endl;
                     ImprimirResultados(angle, V0o, x, y, t);
